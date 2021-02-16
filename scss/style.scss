@@ -132,18 +132,6 @@ li {
       margin-right: 30px;
     }
   }
-  &__lang {
-    display: flex;
-    justify-content: space-around;
-    width: 68px;
-    height: 40px;
-    font-family: "PlayfairDisplay-Regular", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.4em;
-    margin-top: 25px;
-    margin-left: 25px;
-  }
   &__menu-btn {
     border: none;
     background-color: transparent;
@@ -387,5 +375,35 @@ li {
     background-image: url("../images/telegram.svg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+.lang {
+  display: flex;
+  justify-content: flex-start;
+  width: 80px;
+  height: 40px;
+  font-family: "PlayfairDisplay-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4em;
+  margin-top: 25px;
+  margin-left: 25px;
+  &__radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  &__label--ua::after{
+    content: '|';
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  &__radio:checked + label > a {
+    font-family: "PlayfairDisplay-Bold", sans-serif;
+    font-weight: 700;
+  }
+  &__link{
+    color: #000;
   }
 }

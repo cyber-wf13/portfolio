@@ -13,17 +13,17 @@
     <nav class="menu">
       <ul class="menu__list">
         <li class="menu__item"><a href="#profile" class="menu__link">
-          Профіль
-        </a></li>
+            Профіль
+          </a></li>
         <li class="menu__item"><a href="#skill" class="menu__link">
-          Вміння
-        </a></li>
+            Вміння
+          </a></li>
         <li class="menu__item"><a href="#portfolio" class="menu__link">
-          Портфоліо
-        </a></li>
+            Портфоліо
+          </a></li>
         <li class="menu__item"><a href="#contacts" class="menu__link">
-          Контакти
-        </a></li>
+            Контакти
+          </a></li>
       </ul>
       <button class="menu__btn"></button>
     </nav>
@@ -31,12 +31,16 @@
     <header class="header">
       <img src="images/logo.svg" alt="logo" class="header__logo">
       <div class="header__textbox">
-        <p class="header__text-item header__text-item--left">Зонь Олег Вадимович</p>
+        <p class="header__text-item header__text-item--left">Зонь Олег</p>
         <p class="header__text-item header__text-item--right">Junior Front-end developer</p>
       </div>
-      <div class="header__lang">
-        <a href="#" class="header__lang-item">UA | </a>
-        <a href="#" class="header__lang-item">RU</a>
+      <div class="lang">
+        <input type="radio" checked name="lang" id="ua" class="lang__radio lang__radio--ua">
+        <label for="ua" class="lang__label--ua">
+          <a href="#" class="lang__link">UA</a></label>
+        <input type="radio" name="lang" id="ru" class="lang__radio">
+        <label for="ru" class="lang__label--ru">
+          <a href="index-ru.html" class="lang__link">RU</a></label>
       </div>
       <button class="header__menu-btn"></button>
     </header>
