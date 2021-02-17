@@ -2,30 +2,39 @@ let menuBtn = $('.menu__btn');
 let headerMenuBtn = $('.header__menu-btn');
 let menu = $('.menu');
 let popup = $('.portfolio__popup');
+let asideBtn = $('.portfolio__aside-btn');
 let cards = document.querySelectorAll('.block-image__card');
 let center = document.querySelectorAll('.block-image__center');
 
-popup.prev().each(function(i){
-  $(this).on('mouseover', function () {
-    popup.eq(i).css('display', 'block');
-    popup.eq(i).animate({
-      'height': '265px',
-      'opacity': '1',
-    }, 500, 'linear')
-  })
-});
-
-popup.each(function(){
-  $(this).on('mouseleave', function () {
-    setTimeout(()=>{
-      $(this).css('display', 'none');
-    }, 130)
-    $(this).animate({
-      'height': '0px',
-      'opacity': '0',
-    }, 130, 'linear')
+asideBtn.each(function(i){
+  $(this).on('click', function(){
+    if ($(this).attr('data-toggle') == 'hide'){
+      popup.eq(i).animate({
+        'width': '560px',
+        'opacity': 1,
+      }, 300);
+      $(this).animate({'left':'520px',}, 400);
+      popup.eq(i).children().animate({
+        'width': '560px',
+      },600);
+      $(this).attr('data-toggle', 'show');
+      $(this).addClass('portfolio__aside-btn--rotate');
+    }else{
+      if ($(this).attr('data-toggle') == 'show') {
+        popup.eq(i).animate({
+          'width': '0px',
+          'opacity': 0,
+        }, 300);
+        $(this).animate({'left':'10px'}, 400);
+        popup.eq(i).children().animate({
+          'width': '0px',
+        },600);
+        $(this).attr('data-toggle', 'hide');
+        $(this).removeClass('portfolio__aside-btn--rotate');
+    }}
+      
   });
-})
+});
 
 
 headerMenuBtn.on('click', function () {
