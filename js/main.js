@@ -5,68 +5,39 @@ let popup = $('.portfolio__popup');
 let cards = document.querySelectorAll('.block-image__card');
 let center = document.querySelectorAll('.block-image__center');
 
-popup.prev().eq(0).on('mouseover', function () {
-  popup.eq(0).css('display', 'block');
-  popup.eq(0).animate({
-    'height': '265px',
-    'opacity': '1',
-  }, 500)
+popup.prev().each(function(i){
+  $(this).on('mouseover', function () {
+    popup.eq(i).css('display', 'block');
+    popup.eq(i).animate({
+      'height': '265px',
+      'opacity': '1',
+    }, 500, 'linear')
+  })
+});
+
+popup.each(function(){
+  $(this).on('mouseleave', function () {
+    setTimeout(()=>{
+      $(this).css('display', 'none');
+    }, 130)
+    $(this).animate({
+      'height': '0px',
+      'opacity': '0',
+    }, 130, 'linear')
+  });
 })
 
-popup.eq(0).on('mouseleave', function () {
-  setTimeout(()=>{
-    popup.eq(0).css('display', 'none');
-  }, 500)
-  popup.eq(0).animate({
-    'height': '0px',
-    'opacity': '0',
-  }, 500)
-});
-popup.prev().eq(2).on('mouseover', function () {
-  popup.eq(2).css('display', 'block');
-  popup.eq(2).animate({
-    'height': '265px',
-    'opacity': '1',
-  }, 500)
-})
-
-popup.eq(2).on('mouseleave', function () {
-  setTimeout(()=>{
-    popup.eq(2).css('display', 'none');
-  }, 500)
-  popup.eq(2).animate({
-    'height': '0px',
-    'opacity': '0',
-  }, 500)
-});
-popup.prev().eq(1).on('mouseover', function () {
-  popup.eq(1).css('display', 'block');
-  popup.eq(1).animate({
-    'height': '265px',
-    'opacity': '1',
-  }, 500)
-})
-
-popup.eq(1).on('mouseleave', function () {
-  setTimeout(()=>{
-    popup.eq(1).css('display', 'none');
-  }, 500)
-  popup.eq(1).animate({
-    'height': '0px',
-    'opacity': '0',
-  }, 500)
-});
 
 headerMenuBtn.on('click', function () {
   menu.animate({
     'top': '-4px',
-  }, 500, 'linear')
+  }, 300 )
 });
 
 menuBtn.on('click', function () {
   menu.animate({
     'top': '-100px',
-  }, 500, 'linear')
+  }, 300)
 });
 
 let cardTopLeft = LeaderLine.pointAnchor(cards[0], { x: cards[0].clientWidth + 5, y: 52.5 });
