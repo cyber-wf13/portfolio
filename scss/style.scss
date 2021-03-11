@@ -15,9 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  &:visited {
-    color: inherit;
-  }
+  color: inherit;
 }
 
 button {
@@ -376,14 +374,18 @@ li {
     padding: 20px 10px;
     z-index: 5;
     text-shadow: 0px 0px 5px #000;
+    color: #fff;
   }
   &__popup-title{
-    color: #fff;
     padding-bottom: 10px;
   }
   &__popup-text{
     text-align: left;
-    color: #fff;
+  }
+  &__popup-link{
+    padding-top: 10px;
+    text-align: center;
+    color: #b3d1ff;
   }
   &__aside-btn{
     border: none;

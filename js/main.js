@@ -15,7 +15,7 @@ asideBtn.each(function(i){
       }, 300);
       $(this).animate({'left':'520px',}, 400);
       popup.eq(i).children().animate({
-        'width': '560px',
+        'width': '540px',
       },600);
       $(this).attr('data-toggle', 'show');
       $(this).addClass('portfolio__aside-btn--rotate');
