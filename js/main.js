@@ -12,6 +12,7 @@ asideBtn.each(function(i){
       popup.eq(i).animate({
         'width': '560px',
         'opacity': 1,
+        'font-size': '20px',
       }, 300);
       $(this).animate({'left':'520px',}, 400);
       popup.eq(i).children().animate({
@@ -24,6 +25,7 @@ asideBtn.each(function(i){
         popup.eq(i).animate({
           'width': '0px',
           'opacity': 0,
+          'font-size': '0px',
         }, 300);
         $(this).animate({'left':'10px'}, 400);
         popup.eq(i).children().animate({
