@@ -57,6 +57,140 @@
       margin-top: 22px;
     }
   }
+  .page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    &__title {
+      font-size: 34px;
+      margin: 20px 0px 15px;
+    }
+  }
+  .block-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+
+  &__left {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    width: 160px;
+    height: 155px;
+  }
+  &__right {
+    position: relative;
+    width: 100%;
+    height: 145px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 355px;
+    height: 105px;
+    position: static;
+    &-left {
+      &:nth-child(odd){
+        img{
+          margin-right: 10px;
+        } 
+      }
+      &:nth-child(even){
+        flex-direction: row-reverse;
+        text-align: right;
+        img{
+          margin-left: 10px;
+        }     
+      }
+    }
+
+    &-right {
+      justify-content: space-between;
+      &:nth-child(odd){
+        flex-direction: row-reverse;
+      }
+      &:nth-child(even){
+        text-align: right;
+      }
+    }
+  }
+  &__card-icon {
+    height: 90px;
+    width: 80px;
+  }
+  &__textbox {
+    width: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-left: 0px;
+  }
+  &__textbox-right {
+    margin-right: 0px;
+  }
+  &__card-title {
+    font-size: 22px;
+    width: 100%;
+  }
+  &__card-text {
+    font-size: 20px;
+  }
+  &__center-img {
+    height: 90px;
+    width: 90px;
+  }
+  }
+  .skill-page {
+    margin-top: 25px;
+    height: auto;
+    &__left {
+      height: 130px;
+    }
+    &__center {
+      width: 160px;
+      height: 160px;
+      border-radius: 100px;
+      background-color: #fff;
+    }
+    &__right {
+      height: 130px;
+    }
+    &__center-img {
+      height: 160px;
+      width: 160px;
+    }
+    &__card {
+      width: 285px;
+      .block-image__textbox{
+        width: auto;
+      }
+  
+      &-right {
+        justify-content: flex-end;
+      }
+      
+    }
+  }
 }
 
 @media (max-width: 992px){
@@ -109,6 +243,114 @@
       border: none;
       margin-right: 40px;
       margin-top: 15px;
+    }
+  }
+  .page {
+    &__title {
+      font-size: 29px;
+      margin: 15px 0px 10px;
+    }
+  }  
+  .block-image {
+  &__left {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    width: 140px;
+    height: 135px;
+  }
+  &__right {
+    position: relative;
+    width: 100%;
+    height: 145px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 105px;
+    position: static;
+    &-left {
+      &:nth-child(even){
+        flex-direction: row-reverse;
+      }
+    }
+
+    &-right {
+      justify-content: space-around;
+      &:nth-child(odd){
+        img{
+          margin-right: 10px;
+        }
+        flex-direction: row-reverse;
+      }
+      &:nth-child(even){
+        text-align: right;
+        img{
+          margin-left: 10px;
+        } 
+      }
+    }
+  }
+  &__card-icon {
+    height: 80px;
+    width: 70px;
+  }
+  &__textbox {
+    width: 245px;
+    margin-left: 0px;
+  }
+  &__textbox-right {
+    margin-right: 0px;
+  }
+  &__card-title {
+    font-size: 20px;
+  }
+  &__card-text {
+    font-size: 16px;
+  }
+  &__center-img {
+    height: 90px;
+    width: 90px;
+  }
+  }
+  .skill-page {
+    &__left {
+      height: 120px;
+    }
+    &__center {
+      width: 140px;
+      height: 140px;
+      border-radius: 100px;
+      background-color: #fff;
+    }
+    &__right {
+      height: 120px;
+    }
+    &__center-img {
+      height: 140px;
+      width: 140px;
+    }
+    &__card-left{
+      &:nth-child(2) {
+        .block-image__textbox {
+          width: 155px;
+        }
+      }
     }
   }
 }
@@ -170,6 +412,82 @@
       background-size: 25px 24px;
     }
   }
+  .page {
+    &__title {
+      font-size: 26px;
+      margin: 10px 0px 5px;
+    }
+  }
+  
+  .block-image {
+  &__left {
+    height: 120px;
+  }
+  &__center {
+    width: 120px;
+    height: 120px;
+  }
+  &__right {
+    width: 100%;
+    height: 120px;
+  }
+  &__card {
+    height: 105px;
+    &-left {
+      &:nth-child(2){
+        .block-image__textbox {
+          width: 205px;
+        }
+      }
+    }
+  }
+  &__card-icon {
+    height: 70px;
+    width: 60px;
+  }
+  &__textbox {
+    width: 160px;
+    margin-left: 0px;
+  }
+  &__textbox-right {
+    margin-right: 0px;
+  }
+  &__card-title {
+    font-size: 17px;
+  }
+  &__card-text {
+    font-size: 13px;
+  }
+  &__center-img {
+    height: 90px;
+    width: 90px;
+  }
+  }
+  .skill-page {
+    &__left {
+      height: 100px;
+    }
+    &__center {
+      width: 120px;
+      height: 120px;
+      border-radius: 100px;
+      background-color: #fff;
+    }
+    &__right {
+      height: 100px;
+    }
+    &__center-img {
+      height: 120px;
+      width: 120px;
+    }
+    &__card-left{
+      &:nth-child(2) {
+        .block-image__textbox {
+          width: 155px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 576px){
@@ -226,6 +544,80 @@
       background-size: 20px 20px;
     }
   }
+  .page {
+    &__title {
+      font-size: 24px;
+      margin: 5px 0px 0px;
+    }
+  }
+  
+  .block-image {
+  &__left {
+    height: 100px;
+  }
+  &__center {
+    width: 90px;
+    height: 90px;
+  }
+  &__right {
+    width: 100%;
+    height: 100px;
+  }
+  &__card {
+    height: 75px;
+    &-left {
+      &:nth-child(2){
+        .block-image__textbox {
+          width: 160px;
+        }
+      }
+    }
+  }
+  &__card-icon {
+    height: 60px;
+    width: 50px;
+  }
+  &__textbox {
+    width: 130px;
+    margin-left: 0px;
+  }
+  &__textbox-right {
+    margin-right: 0px;
+  }
+  &__card-title {
+    font-size: 15px;
+  }
+  &__card-text {
+    font-size: 10px;
+  }
+  &__center-img {
+    height: 70px;
+    width: 70px;
+  }
+  }
+  .skill-page {
+    &__left {
+      height: 80px;
+    }
+    &__center {
+      width: 100px;
+      height: 100px;
+    }
+    &__right {
+      height: 80px;
+    }
+    &__center-img {
+      height: 100px;
+      width: 100px;
+    }
+    &__card-left{
+      &:nth-child(2) {
+        .block-image__textbox {
+          width: 115px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 430px){
@@ -266,6 +658,12 @@
     margin-left: 0;
     width: 60px;
   }
+  .page {
+    &__title {
+      font-size: 18px;
+      margin: 5px 0px 0px;
+    }
+  }
   .menu {
     width: 300px;
     &__list {
@@ -282,6 +680,73 @@
       margin-right: 5px;
       margin-top: 15px;
       background-size: 15px 15px;
+    }
+  }
+  .block-image {
+    &__left {
+      height: 80px;
+    }
+    &__center {
+      width: 70px;
+      height: 70px;
+    }
+    &__right {
+      width: 100%;
+      height: 80px;
+    }
+    &__card {
+      height: 60px;
+      &-left {
+        &:nth-child(2){
+          .block-image__textbox {
+            width: 125px;
+          }
+        }
+      }
+    }
+    &__card-icon {
+      height: 30px;
+      width: 30px;
+    }
+    &__textbox {
+      width: 105px;
+      margin-left: 0px;
+    }
+    &__textbox-right {
+      margin-right: 0px;
+    }
+    &__card-title {
+      font-size: 11px;
+    }
+    &__card-text {
+      font-size: 8px;
+    }
+    &__center-img {
+      height: 55px;
+      width: 50px;
+    }
+    .skill-page {
+      &__left {
+        height: 50px;
+      }
+      &__center {
+        width: 80px;
+        height: 80px;
+      }
+      &__right {
+        height: 50px;
+      }
+      &__center-img {
+        height: 80px;
+        width: 80px;
+      }
+      &__card-left{
+        &:nth-child(2) {
+          .block-image__textbox {
+            width: 115px;
+          }
+        }
+      }
     }
   }
 }
