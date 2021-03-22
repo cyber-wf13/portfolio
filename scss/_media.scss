@@ -191,6 +191,11 @@
       
     }
   }
+  .portfolio{
+    &__title{
+      margin-bottom: 40px;
+    }
+  }
 }
 
 @media (max-width: 992px){
@@ -353,6 +358,11 @@
       }
     }
   }
+  .portfolio{
+    &__title{
+      margin-bottom: 30px;
+    }
+  }
 }
 
 @media (max-width: 768px){
@@ -488,6 +498,35 @@
       }
     }
   }
+  .portfolio {
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__item {
+      height: 350px;
+      width: 550px;
+      margin-bottom: 20px;
+    }
+    &__item-title {
+      font-size: 24px;
+      height: 81px;
+      margin: 0 auto;
+    }
+    &__item-img {
+      height: 265px;
+      width: 540px;
+    } 
+  }
+  .contacts {
+    height: auto;
+    &__text {
+      font-size: 18px;
+    }
+    &__btn {
+      height: 45px;
+      width: 45px;
+    }
+  }
 }
 
 @media (max-width: 576px){
@@ -550,7 +589,6 @@
       margin: 5px 0px 0px;
     }
   }
-  
   .block-image {
   &__left {
     height: 100px;
@@ -616,6 +654,41 @@
           width: 115px;
         }
       }
+    }
+  }
+  .portfolio {
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__item {
+      height: 300px;
+      width: 420px;
+      margin-bottom: 20px;
+    }
+    &__item-title {
+      font-size: 20px;
+      height: 71px;
+      margin: 0 auto;
+    }
+    &__item-img {
+      height: 215px;
+      width: 400px;
+    } 
+    &__aside-btn{
+      left: 20px;
+      height: 25px;
+      width: 25px;
+      background-size: 20px 20px;
+    }
+  }
+  .contacts {
+    &__text {
+      font-size: 16px;
+      padding-bottom: 10px;
+    }
+    &__btn {
+      height: 40px;
+      width: 40px;
     }
   }
 }
@@ -747,6 +820,42 @@
           }
         }
       }
+    }
+  }
+  .portfolio {
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__item {
+      height: 240px;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+    &__item-title {
+      font-size: 18px;
+      height: 51px;
+      margin: 0 auto;
+    }
+    &__item-img {
+      height: 185px;
+      width: 290px;
+    } 
+    &__aside-btn{
+      top: 75px;
+      left: 20px;
+      height: 20px;
+      width: 20px;
+      background-size: 15px 15px;
+    }
+  }
+  .contacts {
+    &__text {
+      font-size: 13px;
+      padding-bottom: 5px;
+    }
+    &__btn {
+      height: 30px;
+      width: 30px;
     }
   }
 }
