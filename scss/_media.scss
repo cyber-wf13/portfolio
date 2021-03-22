@@ -1,0 +1,287 @@
+@media (max-width:1220px){
+  .container{
+    max-width: 960px;
+  }
+  .header {
+    height: 65px;
+    &__logo {
+      height: 50px;
+      width: 50px;
+      margin-left: 35px;
+    }
+    &__textbox {
+      width: 600px;
+      margin-top: 10px;
+      margin-left: 50px;
+    }
+    &__text-item {
+      &--left {
+        font-size: 30px;
+      }
+      &--right {
+        font-size: 18px;
+        margin-top: 12px;
+        margin-right: 30px;
+      }
+    }
+    &__menu-btn {
+      height: 35px;
+      width: 35px;
+      background-size: 35px 35px;
+      margin-left: 40px;
+      margin-top: 12px;
+    }
+  }
+  .lang {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 25px;
+  }
+  .menu {
+    width: 960px;
+    height: 65px;
+    &__list {
+      width: 885px;
+      height: 40px;
+    }
+    &__item {
+      font-size: 22px;
+      width: 200px;
+      height: auto;
+    }
+    &__btn {
+      height: 35px;
+      width: 35px;
+      border: none;
+      margin-right: 42px;
+      margin-top: 22px;
+    }
+  }
+}
+
+@media (max-width: 992px){
+  .container{
+    max-width: 720px;
+  }
+  .header {
+    &__logo {
+      height: 50px;
+      width: 50px;
+      margin-left: 30px;
+    }
+    &__textbox {
+      width: 410px;
+      margin-top: 10px;
+      margin-left: 25px;
+    }
+    &__text-item {
+      &--left {
+        font-size: 27px;
+      }
+      &--right {
+        font-size: 15px;
+      }
+    }
+    &__menu-btn {
+      height: 30px;
+      width: 30px;
+      background-size: 30px 30px;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+  }
+  .lang {
+    font-size: 16px;
+  }
+  .menu {
+    width: 720px;
+    &__list {
+      width: 640px;
+      height: 40px;
+    }
+    &__item {
+      font-size: 20px;
+      width: 200px;
+    }
+    &__btn {
+      height: 30px;
+      width: 30px;
+      border: none;
+      margin-right: 40px;
+      margin-top: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .container{
+    max-width: 540px;
+  }
+  .header {
+    &__logo {
+      height: 45px;
+      width: 45px;
+      margin-left: 25px;
+    }
+    &__textbox {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 260px;
+      margin-top: 10px;
+      margin-left: 25px;
+    }
+    &__text-item {
+      &--left {
+        font-size: 24px;
+      }
+      &--right {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+    &__menu-btn {
+      height: 25px;
+      width: 25px;
+      background-size: 25px 25px;
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+  }
+  .lang {
+    font-size: 14px;
+  }
+  .menu {
+    width: 540px;
+    &__list {
+      width: 460px;
+      height: 40px;
+    }
+    &__item {
+      font-size: 18px;
+      width: auto;
+    }
+    &__btn {
+      height: 25px;
+      width: 25px;
+      border: none;
+      margin-right: 30px;
+      margin-top: 15px;
+      background-size: 25px 24px;
+    }
+  }
+}
+
+@media (max-width: 576px){
+  .container{
+    max-width: 400px;
+  }
+  .header {
+    &__logo {
+      height: 40px;
+      width: 40px;
+      margin-left: 20px;
+    }
+    &__textbox {
+      width: 170px;
+      margin-top: 7px;
+      margin-left: 20px;
+    }
+    &__text-item {
+      &--left {
+        font-size: 21px;
+      }
+      &--right {
+        font-size: 11px;
+        margin-top: 2px;
+      }
+    }
+    &__menu-btn {
+      height: 20px;
+      width: 20px;
+      background-size: 20px 20px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+  }
+  .lang {
+    font-size: 13px;
+    margin-top: 27px;
+  }
+  .menu {
+    width: 400px;
+    &__list {
+      width: 320px;
+      height: 40px;
+    }
+    &__item {
+      font-size: 16px;
+      width: auto;
+    }
+    &__btn {
+      height: 20px;
+      width: 20px;
+      margin-right: 15px;
+      margin-top: 15px;
+      background-size: 20px 20px;
+    }
+  }
+}
+
+@media (max-width: 430px){
+  .container{
+    max-width: 300px;
+  }
+  .header {
+    &__logo {
+      height: 35px;
+      width: 35px;
+      margin-left: 10px;
+    }
+    &__textbox {
+      width: 145px;
+      margin-top: 7px;
+      margin-left: 20px;
+    }
+    &__text-item {
+      &--left {
+        font-size: 19px;
+      }
+      &--right {
+        font-size: 10px;
+        margin-right: 0;
+      }
+    }
+    &__menu-btn {
+      height: 15px;
+      width: 15px;
+      background-size: 15px 15px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+  }
+  .lang {
+    font-size: 12px;
+    margin-top: 27px;
+    margin-left: 0;
+    width: 60px;
+  }
+  .menu {
+    width: 300px;
+    &__list {
+      width: 270px;
+      height: 40px;
+    }
+    &__item {
+      font-size: 14px;
+      width: auto;
+    }
+    &__btn {
+      height: 15px;
+      width: 15px;
+      margin-right: 5px;
+      margin-top: 15px;
+      background-size: 15px 15px;
+    }
+  }
+}
