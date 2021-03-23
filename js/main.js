@@ -6,17 +6,27 @@ let asideBtn = $('.portfolio__aside-btn');
 let cards = document.querySelectorAll('.block-image__card');
 let center = document.querySelectorAll('.block-image__center');
 
+let popupWidth = 560;
+if (window.innerWidth <= 768){
+  popupWidth = 540;
+}
+if (window.innerWidth <= 576){
+  popupWidth = 400;
+}
+if (window.innerWidth <= 430){
+  popupWidth = 290;
+}
 asideBtn.each(function(i){
   $(this).on('click', function(){
     if ($(this).attr('data-toggle') == 'hide'){
       popup.eq(i).animate({
-        'width': '560px',
+        'width': popupWidth + 'px',
         'opacity': 1,
         'font-size': '20px',
       }, 300);
-      $(this).animate({'left':'520px',}, 400);
+      $(this).animate({'left':(popupWidth-40) + 'px',}, 400);
       popup.eq(i).children().animate({
-        'width': '540px',
+        'width': (popupWidth-20) + 'px',
       },600);
       $(this).attr('data-toggle', 'show');
       $(this).addClass('portfolio__aside-btn--rotate');

@@ -674,6 +674,14 @@
       height: 215px;
       width: 400px;
     } 
+    &__popup{
+      height: 225px;
+      left: 10px;
+      font-size: 15px !important;
+    }
+    &__popup-text{
+      height: auto;
+    }
     &__aside-btn{
       left: 20px;
       height: 25px;
@@ -840,6 +848,11 @@
       height: 185px;
       width: 290px;
     } 
+    &__popup {
+      height: 185px;
+      left: 5px;
+      font-size: 12px !important;
+  }
     &__aside-btn{
       top: 70px;
       left: 20px;
