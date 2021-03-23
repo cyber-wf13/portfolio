@@ -51,75 +51,103 @@ menuBtn.on('click', function () {
   }, 300)
 });
 
-// let cardTopLeft = LeaderLine.pointAnchor(cards[0], { x: cards[0].clientWidth + 5, y: 52.5 });
-// let cardBottomLeft = LeaderLine.pointAnchor(cards[1], { x: cards[1].clientWidth + 5, y: 52.5 });
+let propertyLineRight = {
+  color: '#3EC695',
+  size: 2,
+  path: 'grid',
+  endSocket: 'right',
+  startPlug: 'disc',
+  endPlug: 'disc',
+  startPlugSize: 1,
+  endPlugSize: 1,
+  startPlugColor: '#4EBD88',
+  endPlugColor: '#4EBD88',
+}
+let propertyLineLeft = {};
+Object.assign(propertyLineLeft,  propertyLineRight);
+propertyLineLeft.endSocket = 'left';
+let leftTopHandSide = {
+  x:0,
+  y: '33%',
+}
+let rightTopHandSide = {
+  x: '100%',
+  y: '33%',
+}
+let leftBottomHandSide = {
+  x:0,
+  y: '66%',
+}
+let rightBottomHandSide = {
+  x: '100%',
+  y: '66%',
+}
+let anim = {
+  duration: 800,
+}
 
-// let propertyLineRight = {
-//   color: '#3EC695',
-//   size: 2,
-//   path: 'grid',
-//   endSocket: 'right',
-//   startPlug: 'disc',
-//   endPlug: 'disc',
-//   startPlugSize: 1,
-//   endPlugSize: 1,
-//   startPlugColor: '#4EBD88',
-//   endPlugColor: '#4EBD88',
-// }
+if (window.innerWidth < 1200){
+  propertyLineRight.endSocket = 'bottom';
+  propertyLineLeft.endSocket = 'top';
+}
 
-// let propertyLineLeft = {
-//   color: '#3EC695',
-//   size: 2,
-//   path: 'grid',
-//   endSocket: 'left',
-//   startPlug: 'disc',
-//   endPlug: 'disc',
-//   startPlugSize: 1,
-//   endPlugSize: 1,
-//   startPlugColor: '#4EBD88',
-//   endPlugColor: '#4EBD88',
-// }
+const centerTopLeft = LeaderLine.pointAnchor(center[0], leftTopHandSide);
+const centerTopRight = LeaderLine.pointAnchor(center[0], rightTopHandSide);
+const centerBottomLeft = LeaderLine.pointAnchor(center[0], leftBottomHandSide);
+const centerBottomRight = LeaderLine.pointAnchor(center[0], rightBottomHandSide);
 
-// new LeaderLine(LeaderLine.pointAnchor(center[0], { x: -5, y: center[0].clientHeight / 3 }), cardTopLeft, propertyLineRight).hide('none').show('draw', {
-//   duration: 800,
-// });
+let cardTopLeft = new LeaderLine (centerTopLeft, cards[0]);
+let cardTopRight;
+let cardBottomRight = new LeaderLine (centerBottomRight, cards[3]);
+let cardBottomLeft;
 
-// new LeaderLine(LeaderLine.pointAnchor(center[0], { x: -5, y: (center[0].clientHeight / 3) * 2 }), cardBottomLeft, propertyLineRight).hide('none').show('draw', {
-//   duration: 800,
-// });
+if (window.innerWidth < 1200){
+  cardTopRight = new LeaderLine (centerTopRight, cards[1]);
+  cardBottomLeft = new LeaderLine (centerBottomLeft, cards[2]);
+}else{
+  cardTopRight = new LeaderLine (centerBottomLeft, cards[1]);
+  cardBottomLeft = new LeaderLine (centerTopRight, cards[2]);
+}
 
+const centerSkillTopLeft = LeaderLine.pointAnchor(center[1], leftTopHandSide);
+const centerSkillTopRight = LeaderLine.pointAnchor(center[1], rightTopHandSide);
+const centerSkillBottomLeft = LeaderLine.pointAnchor(center[1], leftBottomHandSide);
+const centerSkillBottomRight = LeaderLine.pointAnchor(center[1], rightBottomHandSide);
 
-// let cardTopRight = LeaderLine.pointAnchor(cards[2], { x: -5, y: 52.5 });
-// let cardBottomRight = LeaderLine.pointAnchor(cards[3], { x: -5, y: 52.5 });
+const cardSkillTopLeft = new LeaderLine (centerSkillTopLeft, cards[4]);
+let cardSkillTopRight;
+let cardSkillBottomLeft;
+const cardSkillBottomRight = new LeaderLine (centerSkillBottomRight, cards[7]);
+if (window.innerWidth < 1200){
+  cardSkillTopRight = new LeaderLine (centerSkillTopRight, LeaderLine.pointAnchor(cards[5], {x:'85%', y:'100%'}));
+  cardSkillBottomLeft = new LeaderLine (centerSkillBottomLeft, cards[6]);
+}else{
+  cardSkillTopRight = new LeaderLine (centerSkillBottomLeft, cards[5]);
+  cardSkillBottomLeft = new LeaderLine (centerSkillTopRight, cards[6]);
+}
 
-// new LeaderLine(LeaderLine.pointAnchor(center[0], { x: 165, y: center[0].clientHeight / 3 }), cardTopRight, propertyLineLeft).hide('none').show('draw', {
-//   duration: 800,
-// });
-// new LeaderLine(LeaderLine.pointAnchor(center[0], { x: 165, y: (center[0].clientHeight / 3 * 2) }), cardBottomRight, propertyLineLeft).hide('none').show('draw', {
-//   duration: 800,
-// });
+for (const prop in propertyLineRight) {
+  cardTopLeft[prop] = propertyLineRight[prop];
+  cardTopRight[prop] = propertyLineRight[prop];
+  cardSkillTopLeft[prop] = propertyLineRight[prop];
+  cardSkillTopRight[prop] = propertyLineRight[prop];
+}
 
+for (const prop in propertyLineLeft) {
+  cardBottomLeft[prop] = propertyLineLeft[prop];
+  cardBottomRight[prop] = propertyLineLeft[prop];
+  cardSkillBottomLeft[prop] = propertyLineLeft[prop];
+  cardSkillBottomRight[prop] = propertyLineLeft[prop];
+}
 
-// let cardTopLeftSkill = LeaderLine.pointAnchor(cards[4], { x: cards[4].clientWidth + 5, y: 50 });
-// let cardBottomLeftSkill = LeaderLine.pointAnchor(cards[5], { x: cards[5].clientWidth + 5, y: 50 });
+cardTopLeft.hide('none').show('draw', anim);
+cardTopRight.hide('none').show('draw', anim);
+cardBottomLeft.hide('none').show('draw', anim);
+cardBottomRight.hide('none').show('draw', anim);
 
-// new LeaderLine(LeaderLine.pointAnchor(center[1], { x: -5, y: center[1].clientHeight / 3 }), cardTopLeftSkill, propertyLineRight).hide('none').show('draw', {
-//   duration: 800,
-// });
+cardSkillTopLeft.hide('none').show('draw', anim);
+cardSkillTopRight.hide('none').show('draw', anim);
+cardSkillBottomLeft.hide('none').show('draw', anim);
+cardSkillBottomRight.hide('none').show('draw', anim);
 
-
-// new LeaderLine(LeaderLine.pointAnchor(center[1], { x: -5, y: (center[1].clientHeight / 3) * 2 }), cardBottomLeftSkill, propertyLineRight).hide('none').show('draw', {
-//   duration: 800,
-// });
-
-
-// let cardTopRightSkill = LeaderLine.pointAnchor(cards[6], { x: -5, y: 50 });
-// let cardBottomRightSkill = LeaderLine.pointAnchor(cards[7], { x: -5, y: 50 });
-
-// new LeaderLine(LeaderLine.pointAnchor(center[1], { x: 205, y: center[1].clientHeight / 3 }), cardTopRightSkill, propertyLineLeft).hide('none').show('draw', {
-//   duration: 800,
-// });
-// new LeaderLine(LeaderLine.pointAnchor(center[1], { x: 205, y: (center[1].clientHeight / 3 * 2) }), cardBottomRightSkill, propertyLineLeft).hide('none').show('draw', {
-//   duration: 800,
-// });
 
