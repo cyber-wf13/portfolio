@@ -145,7 +145,7 @@
         </div>
       </div>
     </section>
-
+  </div>
     <section class="portfolio" id="portfolio">
       <h2 class="page__title portfolio__title">Портфолио</h2>
       <div class="portfolio__content">
@@ -154,7 +154,7 @@
           <img src="images/portfolio-work-1.PNG" alt="site" class="portfolio__item-img">
           <div class="portfolio__popup">
             <h4 class="portfolio__popup-title">Тренировочный макет “Auto Hub”</h4>
-            <p class="portfolio__popup-text">Макет электронного магазина "Auto Hub" демонстрирует создание кастомных input-элементов, а именно: radio, checkbox, select, range. Данные элементы выполнены не только в соответствии дизайна, но и с возможностью настройки на сервере. <br> В наличии страницы "Главная", "Запчасти", "О нас", "Контакты", "Блог"</p>
+            <p class="portfolio__popup-text">Макет магазина "Auto Hub" демонстрирует создание кастомных input-элементов, а именно: radio, checkbox, select, range. Эти элементы выполнены также с возможностью настройки на сервере. <br> В наличии страницы "Главная", "Запчасти", "О нас", "Контакты", "Блог" (также адаптив под 375px)</p>
             <a href="https://cyber-wf13.github.io/work-first/" class="portfolio__popup-link">Перейти к макету</a>
           </div>
           <button class="portfolio__aside-btn" data-toggle='hide'></button>
@@ -164,7 +164,7 @@
           <img src="images/portfolio-work-2.PNG" alt="site" class="portfolio__item-img">
           <div class="portfolio__popup">
             <h4 class="portfolio__popup-title">Тренировочный макет “BaltFlot”</h4>
-            <p class="portfolio__popup-text">Макет "BaltFlot» не имеет особенностей, которая отличает его от других работ. Обычный макет, обычной компании.</p>
+            <p class="portfolio__popup-text">Макет "BaltFlot» выполнен адаптивно от 320px до +1440px, которая отличает его от других работ. Обычный макет, обычной компании.</p>
             <a href="https://cyber-wf13.github.io/work-second/" class="portfolio__popup-link">Перейти к макету</a>
           </div>
           <button class="portfolio__aside-btn" data-toggle='hide'></button>
@@ -182,14 +182,20 @@
       </div>
     </section>
 
-    <section class="contacts" id="contacts">
+    <div class="container">
+
+
+    <footer class="footer contacts" id="contacts">
       <h4 class="page__title">Контакты</h4>
       <p class="contacts__text">
         Если хотите связаться со мной лично - присылайте сообщения</p>
-      <a href="https://t.me/wf_13" class="contacts__link">
-        <button class="contacts__btn"></button>
-      </a>
-    </section>
+        <a href="https://t.me/wf_13" class="contacts__link">
+          <button class="contacts__btn contacts__btn--telegram"></button>
+        </a>
+        <a href="https://github.com/cyber-wf13" class="contacts__link">
+          <button class="contacts__btn contacts__btn--github"></button>
+        </a>
+    </footer>
   </div>
 
   <script src="js/leader-line.min.js"></script>

@@ -7,14 +7,17 @@ let cards = document.querySelectorAll('.block-image__card');
 let center = document.querySelectorAll('.block-image__center');
 
 let popupWidth = 560;
+let fontSizeAddaptive = 20;
 if (window.innerWidth <= 768){
   popupWidth = 540;
 }
 if (window.innerWidth <= 576){
   popupWidth = 400;
+  fontSizeAddaptive = 15;
 }
 if (window.innerWidth <= 430){
   popupWidth = 290;
+  fontSizeAddaptive = 12;
 }
 asideBtn.each(function(i){
   $(this).on('click', function(){
@@ -22,7 +25,7 @@ asideBtn.each(function(i){
       popup.eq(i).animate({
         'width': popupWidth + 'px',
         'opacity': 1,
-        'font-size': '20px',
+        'font-size': fontSizeAddaptive + 'px',
       }, 300);
       $(this).animate({'left':(popupWidth-40) + 'px',}, 400);
       popup.eq(i).children().animate({

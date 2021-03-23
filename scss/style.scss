@@ -433,9 +433,14 @@ li {
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-image: url("../images/telegram.svg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  &__btn--telegram{
+    background-image: url("../images/telegram.svg");
+  }
+  &__btn--github{
+    background-image: url("../images/github.svg");
   }
 }
 
