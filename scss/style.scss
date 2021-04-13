@@ -337,10 +337,12 @@ li {
     position: relative;
     height: 350px;
     width: 570px;
-    // background: #7E33F9;
     background: #14c063;
     border-radius: 15px;
     margin-bottom: 20px;
+  }
+  &__item--project{
+    background: #7E33F9;
   }
   &__item-title {
     font-family: "Ubuntu-Bold";
@@ -406,13 +408,20 @@ li {
     background-size: 25px 25px;
     background-position: center;
     outline: none;
+    cursor: pointer;
   }
   &__aside-btn--rotate{
     animation-name: 'asideBtnRotate';
     animation-fill-mode: forwards;
     animation-duration: 400ms;
   }
-
+  &__aside-btn--move{
+    animation: AsideBtnMove;
+    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
 }
 
 .contacts {
@@ -435,6 +444,11 @@ li {
     width: 50px;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover{
+      transform: scale(0.8);
+    }
   }
   &__btn--telegram{
     background-image: url("../images/telegram.svg");
@@ -480,6 +494,24 @@ li {
   }
   100%{
     transform: rotate(180deg);
+  }
+}
+
+@keyframes AsideBtnMove{
+  0%{
+    transform: translateX(0px);
+  }
+  25%{
+    transform: translateX(5px);
+  }
+  50%{
+    transform: translateX(0px);
+  }
+  75%{
+    transform: translateX(5px);
+  }
+  100%{
+    transform: translateX(0px);
   }
 }
 

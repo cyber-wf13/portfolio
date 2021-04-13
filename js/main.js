@@ -2,6 +2,7 @@ let menuBtn = $('.menu__btn');
 let headerMenuBtn = $('.header__menu-btn');
 let menu = $('.menu');
 let popup = $('.portfolio__popup');
+let portfolioImg = $('.portfolio__item-img');
 let asideBtn = $('.portfolio__aside-btn');
 let cards = document.querySelectorAll('.block-image__card');
 let center = document.querySelectorAll('.block-image__center');
@@ -51,6 +52,14 @@ asideBtn.each(function(i){
   });
 });
 
+portfolioImg.each(function(index){
+  $(this).on('mouseover', ()=>{
+    asideBtn.eq(index).addClass('portfolio__aside-btn--move');
+  })
+  $(this).on('mouseout', ()=>{
+    asideBtn.eq(index).removeClass('portfolio__aside-btn--move');
+  })
+})
 
 headerMenuBtn.on('click', function () {
   menu.animate({
