@@ -409,18 +409,18 @@ li {
     background-position: center;
     outline: none;
     cursor: pointer;
-  }
-  &__aside-btn--rotate{
-    animation-name: 'asideBtnRotate';
-    animation-fill-mode: forwards;
-    animation-duration: 400ms;
-  }
-  &__aside-btn--move{
+    transition: 0.2s;
     animation: AsideBtnMove;
     animation-iteration-count: infinite;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
+  }
+  &__aside-btn--rotate{
+    animation-name: asideBtnRotate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
   }
 }
 
@@ -490,28 +490,28 @@ li {
 
 @keyframes asideBtnRotate{
   0%{
-    transform: rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
   }
   100%{
-    transform: rotate(180deg);
+    transform: translateX(0px) rotate(180deg);
   }
 }
 
 @keyframes AsideBtnMove{
   0%{
-    transform: translateX(0px);
+    transform: translateX(0px); 
   }
   25%{
-    transform: translateX(5px);
+    transform: translateX(5px); 
   }
   50%{
-    transform: translateX(0px);
+    transform: translateX(0px); 
   }
   75%{
-    transform: translateX(5px);
+    transform: translateX(5px); 
   }
   100%{
-    transform: translateX(0px);
+    transform: translateX(0px); 
   }
 }
 

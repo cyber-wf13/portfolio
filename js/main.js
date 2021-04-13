@@ -52,15 +52,6 @@ asideBtn.each(function(i){
   });
 });
 
-portfolioImg.each(function(index){
-  $(this).on('mouseover', ()=>{
-    asideBtn.eq(index).addClass('portfolio__aside-btn--move');
-  })
-  $(this).on('mouseout', ()=>{
-    asideBtn.eq(index).removeClass('portfolio__aside-btn--move');
-  })
-})
-
 headerMenuBtn.on('click', function () {
   menu.animate({
     'top': '-4px',
